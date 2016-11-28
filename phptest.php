@@ -19,15 +19,49 @@ $db = mysqli_connect($host,$username,$password,'recipes')
     <body>
         <h1>PHP Connection Success</h1>
         <?php
-            $query = "SELECT name FROM recipe_name";
-            mysqli_query($db, $query) or die('Error querying database.');
+            $name_query = "SELECT * FROM recipe_name";
+            $credit_query = "SELECT * FROM recipe_credit";
+            $ingredient_query = "SELECT * FROM recipe_ingredients";
+            $instruction_query = "SELECT * FROM recipe_instructions";
+            $tag_query = "SELECT * FROM recipe_tags";
         
-            $result = mysqli_query($db, $query);
+            $recipe_names = array();
+            $recipe_credits = array();
+            $recipe_ingredients = array();
+            $recipe_instructions = array();
+            $recipe_tags = array();
         
-        while ($row = mysqli_fetch_array($result)) {
-            echo $row['name'].'<br />';
-        }
-        mysqli_close($db);
+            $result = mysqli_query($db, $name_query);
+            while ($row = mysqli_fetch_assoc($result)) {
+                $recipe_names[] = $row;
+            }
+        
+            $result = mysqli_query($db, $credit_query);
+            while ($row = mysqli_fetch_assoc($result)) {
+                $recipe_credits[] = $row;
+            }
+        
+            $result = mysqli_query($db, $ingredient_query);
+            while ($row = mysqli_fetch_assoc($result)) {
+                $recipe_ingredients[] = $row;
+            }
+        
+            $result = mysqli_query($db, $instruction_query);
+            while ($row = mysqli_fetch_assoc($result)) {
+                $recipe_instructions[] = $row;
+            }
+        
+            $result = mysqli_query($db, $tag_query);
+            while ($row = mysqli_fetch_assoc($result)) {
+                $recipe_tags[] = $row;
+            }
+        
+            echo json_encode($recipe_names).'<br /><br />';
+            echo json_encode($recipe_credits).'<br /><br />';
+            echo json_encode($recipe_ingredients).'<br /><br />';
+            echo json_encode($recipe_instructions).'<br /><br />';
+            echo json_encode($recipe_tags);
+            mysqli_close($db);
         ?>
     </body>
 </html>
