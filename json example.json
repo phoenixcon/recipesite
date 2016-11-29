@@ -1,0 +1,62 @@
+[
+    {
+        "Recipe Name": "Corn Dogs",
+        "Credit Text": "food.com",
+        "Ingredients": 
+        {
+            "Ingredient Name": "8 Hot Dogs",
+            "Ingredient Name": "1 1\/4 cups Flour",
+            "Ingredient Name": "1 teaspoon Salt",
+            "Ingredient Name": "3\/4 cup Cornmeal",
+            "Ingredient Name": "4 tablespoons Sugar",
+            "Ingredient Name": "1 teaspoon Baking Powder",
+            "Ingredient Name": "2 eggs",
+            "Ingredient Name": "3\/4 cup Milk",
+            "Ingredient Name": "Wooden Skewers"
+        },
+        "Instructions":
+        {
+            "Instruction Step": "1","Text Description": "Mix all the dry ingredients, then add eggs and milk.",
+            "Instruction Step": "2","Text Description": "Mix till lump free.",
+            "Instruction Step": "3","Text Description": "Skewer the dogs and dip into the batter to coat.",
+            "Instruction Step": "4","Text Description": "Deep fry in 350 degree oil. Remove when golden brown, about 5 minutes."
+        },
+        "Tags":
+        {
+            "Tag Text": "Entree"
+        }
+    },
+    {
+        "Recipe Name": "Drunken Chicken Marsala",
+        "Credit Text":"pinchofyum.com",
+        "Ingredients": 
+        {
+            "Ingredient Name":"16 ounces Fresh Crimini Mushrooms, sliced",
+            "Ingredient Name":"3 tablespoons Butter, divided",
+            "Ingredient Name":"2 cloves Garlic, minced",
+            "Ingredient Name":"1 cup dry Marsala Wine",
+            "Ingredient Name":"1 teaspoon Cornstarch dissolved in 1 tablespoon Cold Water",
+            "Ingredient Name":"2 tablespoons Heavy Cream",
+            "Ingredient Name":"1\/2 teaspoon Salt, more to taste",
+            "Ingredient Name":"1 1\/2 to 2 pounds Boneless Skinless Chicken Breasts",
+            "Ingredient Name":"1 tablespoon Olive Oil",
+            "Ingredient Name":"1\/3 cup Flour",
+            "Ingredient Name":"1 teaspoon All-Purpose Seasoning plus a pinch of Salt and Pepper",
+            "Ingredient Name":"1 to 2 cups Cherry Tomatoes",
+            "Ingredient Name":"Fresh Parsley"
+        },
+        "Instructions":
+        {
+            "Instruction Step": "1","Text Description":"Heat 1 tablespoon butter in a medium or large saucepan over medium heat. Add the mushrooms and saut\u00e9 for 8-10 minutes, until golden brown.",
+            "Instruction Step": "2","Text Description":"Add the garlic and wine - let the mixture simmer gently to reduce the wine, stirring occasionally. After 15-20 minutes, add the cornstarch, cream, and salt to the Marsala mixture - it should start to thicken slightly.",
+            "Instruction Step": "3","Text Description":"Pound the chicken breasts until they are about 1 inch thick to help with even cooking. Cut them into smaller, single-serving pieces if necessary.",
+            "Instruction Step": "4","Text Description":"Combine the flour, seasoning, and salt and pepper in a shallow bowl. Toss the chicken in the flour mixture until coated. Shake off excess.",
+            "Instruction Step": "5","Text Description":"Heat the remaining 2 tablespoons butter and oil in a large skillet over medium high heat. Pan-fry the coated chicken for a few minutes on each side, until golden brown and cooked through.",
+            "Instruction Step": "6","Text Description":"Add sauce and mushrooms to the skillet with the chicken. Top with tomatoes and simmer until the tomatoes have softened. Serve with fresh parsley."
+        },
+        "Tags":
+        {
+            "Tag Text": "Entree,Chicken"
+        }
+    }
+]
