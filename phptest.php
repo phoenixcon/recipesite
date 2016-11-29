@@ -19,43 +19,7 @@ $db = mysqli_connect($host,$username,$password,'recipes')
     </head>
     <body>
         <?php
-        $name_query = "SELECT * FROM recipe_name";
-        $credit_query = "SELECT * FROM recipe_credit";
-        $ingredient_query = "SELECT * FROM recipe_ingredients";
-        $instruction_query = "SELECT * FROM recipe_instructions";
-        $tag_query = "SELECT * FROM recipe_tags";
 
-        $recipe_names = array();
-        $recipe_credits = array();
-        $recipe_ingredients = array();
-        $recipe_instructions = array();
-        $recipe_tags = array();
-
-        $result = mysqli_query($db, $name_query);
-        while ($row = mysqli_fetch_assoc($result)) {
-            $recipe_names[] = $row;
-        }
-
-        $result = mysqli_query($db, $credit_query);
-        while ($row = mysqli_fetch_assoc($result)) {
-            $recipe_credits[] = $row;
-        }
-
-        $result = mysqli_query($db, $ingredient_query);
-        while ($row = mysqli_fetch_assoc($result)) {
-            $recipe_ingredients[] = $row;
-        }
-
-        $result = mysqli_query($db, $instruction_query);
-        while ($row = mysqli_fetch_assoc($result)) {
-            $recipe_instructions[] = $row;
-        }
-
-        $result = mysqli_query($db, $tag_query);
-        while ($row = mysqli_fetch_assoc($result)) {
-            $recipe_tags[] = $row;
-        }
-        
         //SELECT RECIPE NAMES
         $recipe_name_select = "SELECT * FROM recipe_name"; 
         $name_result = mysqli_query($db, $recipe_name_select);
@@ -96,7 +60,8 @@ $db = mysqli_connect($host,$username,$password,'recipes')
                 while ($instruction_row = mysqli_fetch_assoc($instruction_result)) {
                     echo $instruction_row['instructionstep'].'. '.$instruction_row['textdescription'].'<br>';
                 }
-
+                
+                echo 'Tags: ';
                 //SELECT RECIPE-TAG KEYS
                 $recipe_tagkey_select = "SELECT tagkey FROM recipe_name_tag WHERE recipekey='".$recipekey."'";
                 $tagkey_result = mysqli_query($db, $recipe_tagkey_select);
@@ -107,13 +72,13 @@ $db = mysqli_connect($host,$username,$password,'recipes')
                     $recipe_tag_select = "SELECT tagtext FROM recipe_tags WHERE tagkey='".$tagkey."'";
                     $tag_result = mysqli_query($db, $recipe_tag_select);
                     while ($tag_row = mysqli_fetch_assoc($tag_result)) {
-                        echo 'Tags: '.$tag_row['tagtext'].' ';
+                        echo $tag_row['tagtext'].' ';
                     }
                 }
             }
-            echo '<br>';
+            echo '<br><br>';
         }
-        
+
 
 
         //echo json_encode($recipe_names).'<br /><br />';
