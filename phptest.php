@@ -78,14 +78,6 @@ $db = mysqli_connect($host,$username,$password,'recipes')
             }
             echo '<br><br>';
         }
-
-
-
-        //echo json_encode($recipe_names).'<br /><br />';
-        //echo json_encode($recipe_credits).'<br /><br />';
-        //echo json_encode($recipe_ingredients).'<br /><br />';
-        //echo json_encode($recipe_instructions).'<br /><br />';
-        //echo json_encode($recipe_tags);
         mysqli_close($db);
         ?>
     </body>
