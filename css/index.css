@@ -35,7 +35,8 @@ body {
 /* ----- Custom Styles Start Here ----- */
 
 html {
-    font-size: 18px;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 header, footer {
@@ -93,6 +94,8 @@ label {
 
 .tags {
     margin-right: 0.25em;
+    font-weight: 300;
+    text-decoration: underline;
 }
 
 .tags:last-child {
