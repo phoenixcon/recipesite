@@ -88,6 +88,13 @@
   }
 }
 
+INSERT INTO `recipe_ingredients` (`ingredientkey`, `recipekey`, `ingredientname`) VALUES (NULL, '3', '6 slices Bacon, chopped');
+INSERT INTO `recipe_ingredients` (`ingredientkey`, `recipekey`, `ingredientname`) VALUES (NULL, '3', '1 tablespoon Balsamic Vinegar');
+INSERT INTO `recipe_ingredients` (`ingredientkey`, `recipekey`, `ingredientname`) VALUES (NULL, '3', '1 tablespoon Brown Sugar');
+INSERT INTO `recipe_ingredients` (`ingredientkey`, `recipekey`, `ingredientname`) VALUES (NULL, '3', '2 teaspoons Dijon Mustard');
+INSERT INTO `recipe_ingredients` (`ingredientkey`, `recipekey`, `ingredientname`) VALUES (NULL, '3', '2 tablespoons Water');
+INSERT INTO `recipe_ingredients` (`ingredientkey`, `recipekey`, `ingredientname`) VALUES (NULL, '3', '1/2 Lemon, juice');
+
 Named Arrays: 
 
 recipe-list - contains one array - recipe
@@ -95,3 +102,5 @@ recipe - contains X arrays (x = number of recipes, each containing five items)
 ingredient - contains X associative arrays (x = number of ingredients), each with one item (ingredient-name)
 instruction - contains X associative arrays (x = number of instructions), each with two items (instruction-step and text-description)
 tag - contains X associative arrays, each with one item (tag-text)
+
+$recipelist = array('recipe' => array(array('title' => '', 'credit' => '', 'ingredient' => array(array( 'ingredientname' => '' ),array( 'ingredientname' => '' ),array( 'ingredientname' => '' )), 'instruction' => array(array( 'instruction-step' => '', 'text-description' => '' ),array( 'instruction-step' => '', 'text-description' => '' ),array( 'instruction-step' => '', 'text-description' => '' )), 'tag' => array(array( 'tag-text' => '' ),array( 'tag-text' => '' ),array( 'tag-text' => '' )) )));
