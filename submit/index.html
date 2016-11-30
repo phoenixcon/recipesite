@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Legg Family Recipes - Submit a Recipe</title>
+        <meta charset="utf-8"  />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="../scripts/scripts.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../css/index.css">
+    </head>
+    <body>
+        <header>
+            <h1>Legg Family Recipe Site</h1>
+        </header>
+        <div class="group">
+            <form action="../scripts/handle.php" method="post" name="recipe-submit">
+                <div id="name_fields">
+                    <label for="name">Recipe Name</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div id="credit_fields">
+                    <label for="credit">Recipe Credit</label>
+                    <input type="text" name="credit" required>
+                </div>
+                <div id="ingredient_fields">
+                    <label for="ingredient[]">Ingredients</label>
+                    <button class="add_more" id="add_ingredient">Add More Ingredients</button>
+                    <div><input type="text" name="ingredient[]" required></div>
+                </div>
+                <div id="instruction_fields">
+                    <label for="instruction[]">Instructions</label>
+                    <button class="add_more" id="add_instruction">Add More Instructions</button>
+                    <input type="text" name="instruction[]" required>
+                </div>
+                <div id="tag_fields">
+                    <label for="tag[]">Tags</label>
+                    <button class="add_more" id="add_tag">Add More Tags</button>
+                    <input type="text" name="tag[]" required>
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <footer>
+            <h6>&copy; Midnight Design Group, 2016</h6>
+        </footer>
+    </body>
+</html>

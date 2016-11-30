@@ -102,6 +102,60 @@ label {
     margin-right: 0;
 }
 
+footer {
+    
+}
+
+/* ----- FORM STYLES ----- */
+
+form {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+form label, form input {
+    margin-bottom: 0.75em;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+form div a {
+    float: right;
+    position: absolute;
+    margin-left: 1em;
+    line-height: 2.5em;
+    font-size: 0.75em;
+    font-weight: 300;
+}
+
+.add_more {
+    width: 15%;
+    font-size: 0.75em;
+}
+
+form input, form button {
+    width: 30%;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+form input[type="submit"], form button {
+    display: block;
+    margin: 0 auto 0.75em;
+    background-color: #f0f0f0;
+    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.25em;
+    height: 2em;
+    padding: 0 1em;
+}
+
+
 .group:after {
   content: "";
   display: table;
