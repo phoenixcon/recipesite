@@ -1,10 +1,5 @@
 <?php
-$username = 'root';
-$password = 'root';
-$host = 'localhost';
-
-$db = mysqli_connect($host,$username,$password,'recipes')
-    or die('Unable to Connect');
+include 'scripts/connection-local.php';
 ?>
 
 
