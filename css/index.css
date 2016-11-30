@@ -115,7 +115,7 @@ form {
 }
 
 form label, form input {
-    margin-bottom: 0.75em;
+    margin-bottom: 15px;
 }
 
 form label {
@@ -146,7 +146,7 @@ form input, form button {
 
 form input[type="submit"], form button {
     display: block;
-    margin: 0 auto 0.75em;
+    margin: 0 auto 15px;
     background-color: #f0f0f0;
     border: 1px solid rgb(0, 0, 0);
     border: 1px solid rgba(0, 0, 0, 0.1);
