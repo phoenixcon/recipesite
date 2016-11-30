@@ -18,8 +18,6 @@
 
             //CONNECTION TO DATABASE
             include 'scripts/connection-local.php';
-            //DECLARE NEEDED ARRAYS
-            //$recipelist = array('recipe-list' => array('recipe' => array(array('title' => '', 'credit' => '', 'ingredient' => array(array( 'ingredientname' => '' ),array( 'ingredientname' => '' ),array( 'ingredientname' => '' )), 'instruction' => array(array( 'instruction-step' => '', 'text-description' => '' ),array( 'instruction-step' => '', 'text-description' => '' ),array( 'instruction-step' => '', 'text-description' => '' )), 'tag' => array(array( 'tag-text' => '' ),array( 'tag-text' => '' ),array( 'tag-text' => '' )) ))));
 
             //SELECT RECIPE NAMES
             $recipe_name_select = "SELECT * FROM recipe_name"; 
