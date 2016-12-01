@@ -1,7 +1,3 @@
-//Validate Form
-//Insert into Database
-//Return Success or Fail message
-
 $(document).ready(function() {
     var max_fields          = 20; //maximum input boxes allowed
     var ingredientwrapper   = $("#ingredient_fields"); //Ingredient wrapper

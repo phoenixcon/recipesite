@@ -138,8 +138,11 @@ form div a {
     font-size: 0.75em;
 }
 
-form input, form button {
+form .success, form .error_text, form input, form button {
     width: 30%;
+}
+
+form input, form button {
     text-align: center;
     font-size: 1.25em;
 }
@@ -153,6 +156,32 @@ form input[type="submit"], form button {
     border-radius: 0.25em;
     height: 2em;
     padding: 0 1em;
+}
+
+form .success {
+    height: 2em;
+    line-height: 2em;
+    margin: auto;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    border-radius: 0.25em;
+    border: 1px solid #b1c197;
+}
+
+form .error_text {
+    height: 1.5em;
+    line-height: 1.5em;
+    margin: auto;
+    font-weight: 300;
+    font-size: 1em;
+    color: #D8000C;
+    background-color: #FFBABA;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    padding: 3px;
+    border: 1px solid #a50009;
 }
 
 
