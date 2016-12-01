@@ -1,8 +1,8 @@
 $(document).ready(function() {
     var max_fields          = 20; //maximum input boxes allowed
-    var ingredientwrapper   = $("#ingredient_fields"); //Ingredient wrapper
-    var instructionwrapper  = $("#instruction_fields"); //Instruction wrapper
-    var tagwrapper          = $("#tag_fields"); //Tag wrapper
+    var ingredientwrapper   = $("#ingredient_field"); //Ingredient wrapper
+    var instructionwrapper  = $("#instruction_field"); //Instruction wrapper
+    var tagwrapper          = $("#tag_field"); //Tag wrapper
     var add_ingredient      = $("#add_ingredient"); //Add button ID
     var add_instruction     = $("#add_instruction"); //Add button ID
     var add_tag             = $("#add_tag"); //Add button ID

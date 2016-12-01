@@ -111,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $data['errors']  = $errors;
     } else {
         $data['success'] = true;
-        $data['message'] = 'Success!';
+        $data['message'] = 'Recipe Submitted Successfully';
     }
 
 } else {
@@ -121,25 +121,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $data['errors']   = $errors;
 
 };
-
-//if ($data['success'] == 'true') {
-
-    //include('connection-local.php'); //mySQL Connection
-
-    //if ($form_name == 'Kris') {
-        
-        
-    //    $score_query = mysqli_query($dbc, "SELECT COUNT(*) FROM kris_workouts WHERE date LIKE '".$form_month."%'");
-    //    $score_array = mysqli_fetch_array($score_query);
-    //    $score = $score_array[0]+1;
-        
-
-    //    mysqli_query($dbc, "INSERT INTO kris_workouts(score, name, date, activity) VALUES('$score', '$form_name', '$form_date', '$form_activity')");
-
-    //}
-
-    //mysqli_close ($dbc);
-//}
 
 echo json_encode($data);
 

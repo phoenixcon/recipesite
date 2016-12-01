@@ -156,6 +156,11 @@ form input[type="submit"], form button {
     border-radius: 0.25em;
     height: 2em;
     padding: 0 1em;
+    cursor:pointer;
+}
+
+form input[type="submit"]:hover, form button:hover {
+    
 }
 
 form .success {
