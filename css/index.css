@@ -247,11 +247,6 @@ form .error_text {
     }
 }
 
-@media only screen and (max-width: 700px){
-    /* styles for browsers smaller than 700px; */
-    
-}
-
 
 .group:after {
     content: "";
