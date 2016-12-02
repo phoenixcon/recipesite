@@ -128,28 +128,29 @@ $(document).ready(function() {
 
     $(ingredientwrapper).on("click",".remove_field", function(e){ //user click on remove text
         e.preventDefault(); $(this).parent('div').remove(); ingredient--;
-    })
+    });
 
     $(instructionwrapper).on("click",".remove_field", function(e){ //user click on remove text
         e.preventDefault(); $(this).parent('div').remove(); instruction--;
-    })
+    });
 
     $(tagwrapper).on("click",".remove_field", function(e){ //user click on remove text
         e.preventDefault(); $(this).parent('div').remove(); tag--;
-    })
+    });
 
     /*===== END ADD FIELDS TO FORM =====*/
 
     /*===== GRID LAYOUT JS - MASONRY PLUGIN =====*/
 
-    $('.grid').masonry({
-        // set itemSelector so .grid-sizer is not used in layout
-        itemSelector: '.grid-item',
-        // use element for option
-        columnWidth: '.grid-sizer',
-        percentPosition: true,
-        gutter: '.gutter-sizer',
-    })
-
+    if ($(window).width()>800) {
+        $('.grid').masonry({
+            // set itemSelector so .grid-sizer is not used in layout
+            itemSelector: '.grid-item',
+            // use element for option
+            columnWidth: '.grid-sizer',
+            percentPosition: true,
+            gutter: '.gutter-sizer'
+        })
+    }
     /*===== END GRID LAYOUT JS - MASONRY PLUGIN =====*/
 });

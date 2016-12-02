@@ -72,7 +72,7 @@ h2 {
 }
 
 .grid-item {
-    margin-top: 2%;
+    margin: 1% 0;
     padding: 1% 2%;
     box-sizing: border-box;
     float: left;
@@ -236,6 +236,9 @@ form .error_text {
 
 @media only screen and (max-width: 800px){
     /* styles for browsers smaller than 800px; */
+    html {
+        font-size: 14px;
+    }
     .grid {
         width: 95%;
     }
@@ -243,7 +246,11 @@ form .error_text {
         width: 100%;
     }
     .grid-item {
+        margin: 2% 0;
         padding: 3% 7%;
+    }
+    .gutter-sizer {
+        width: 0%;
     }
 }
 
