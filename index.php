@@ -5,6 +5,7 @@
         <meta charset="utf-8"  />
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="scripts/masonry.pkgd.min.js"></script>
         <script type="text/javascript" src="scripts/scripts.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/index.css">
@@ -13,7 +14,9 @@
         <header>
             <h1>Legg Family Recipe Site</h1>
         </header>
-        <div class="group">
+        <div class="group grid">
+            <div class="grid-sizer"></div>
+            <div class="gutter-sizer"></div>
             <?php
 
             //CONNECTION TO DATABASE
@@ -23,7 +26,7 @@
             $recipe_name_select = "SELECT * FROM recipe_name"; 
             $name_result = mysqli_query($db, $recipe_name_select);
             while ($row = mysqli_fetch_assoc($name_result)) {
-                echo '<section class="recipe"><h2 class="recipetitle">'.$row['recipename'].'</h2>';
+                echo '<section class="recipe grid-item"><h2 class="recipetitle">'.$row['recipename'].'</h2>';
                 $recipe_name=$row['recipename'];
 
                 echo '<section class="credit"><label>Recipe Credit:</label>';
@@ -59,7 +62,7 @@
                     echo '</ul><ol>';
 
                     //SELECT RECIPE INSTRUCTIONS
-                    $recipe_instruction_select = "SELECT textdescription FROM recipe_instructions WHERE recipekey='".$recipekey."' ORDER BY instructionstep ASC";
+                    $recipe_instruction_select = "SELECT textdescription FROM recipe_instructions WHERE recipekey='".$recipekey."'";
                     $instruction_result = mysqli_query($db, $recipe_instruction_select);
                     while ($instruction_row = mysqli_fetch_assoc($instruction_result)) {
                         echo '<li>'.$instruction_row['textdescription'].'</li>';

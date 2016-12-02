@@ -58,9 +58,21 @@ h2 {
     text-align: center;
 }
 
-.recipe {
-    width: 24%;
-    margin: 0 3%;
+.grid {
+    width: 88%;
+    margin: auto;
+}
+
+.grid-item, .grid-sizer {
+    width: 32%;
+}
+
+.gutter-sizer {
+    width: 2%;
+}
+
+.grid-item {
+    margin-top: 2%;
     padding: 1% 2%;
     box-sizing: border-box;
     float: left;
@@ -68,13 +80,13 @@ h2 {
     border-radius: 4px;
 }
 
-.recipe:first-child {
-    margin-left: 8%;
-}
+/*.grid-item:nth-child(3n+1) {
+    margin-left: 4%;
+}*/
 
-.recipe:last-child {
+/*.recipe:last-child {
     margin-right: 8%;
-}
+}*/
 
 h2, .credit, ul, ol, .tags {
     margin-bottom: 0.75em;
@@ -138,7 +150,7 @@ form div a {
     font-size: 0.75em;
 }
 
-form .success, form .error_text, form input, form button {
+form .success, form .error, form .error_text, form input, form button {
     width: 30%;
 }
 
@@ -163,16 +175,30 @@ form input[type="submit"]:hover, form button:hover {
     
 }
 
-form .success {
+form .success, form .error_message {
     height: 2em;
     line-height: 2em;
     margin: auto;
     font-weight: bold;
     font-size: 1.5em;
+    border-radius: 0.25em;
+}
+
+form .success {
     color: #4F8A10;
     background-color: #DFF2BF;
-    border-radius: 0.25em;
     border: 1px solid #b1c197;
+}
+
+form .error_message {
+    display: inline;
+    padding: 10px;
+}
+
+form .error_message, form .error-text {
+    color: #D8000C;
+    background-color: #FFBABA;
+    border: 1px solid #a50009;
 }
 
 form .error_text {
@@ -181,12 +207,9 @@ form .error_text {
     margin: auto;
     font-weight: 300;
     font-size: 1em;
-    color: #D8000C;
-    background-color: #FFBABA;
     margin-top: -15px;
     margin-bottom: 15px;
     padding: 3px;
-    border: 1px solid #a50009;
 }
 
 
