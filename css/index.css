@@ -234,7 +234,7 @@ form .error_text {
     }
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 800px) and (max-device-width: 800px){
     /* styles for browsers smaller than 800px; */
     .grid {
         width: 95%;
