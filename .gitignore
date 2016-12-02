@@ -1,3 +1,5 @@
 connection.php
 connection-local.php
 index-workout.html
+.htaccess
+.htpasswd
