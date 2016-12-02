@@ -10,7 +10,7 @@ $(document).ready(function() {
 
         event.preventDefault();
         var form = $('#recipe-submit');
-        var formData = form.serialize().replace(/%5B%5D/g, '[]').replace(/%20/g, ' ');
+        var formData = form.serialize().replace(/%5B%5D/g, '[]').replace(/%20/g, ' ').replace('°', '&deg;').replace('é', '&eacute;');
         console.log(formData);
 
         $.ajax({
