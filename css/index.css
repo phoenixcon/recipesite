@@ -1,6 +1,6 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+v2.0 | 20110126
+License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -16,20 +16,20 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 
 /* ----- Custom Styles Start Here ----- */
@@ -78,14 +78,15 @@ h2 {
     float: left;
     border: 1px solid black;
     border-radius: 4px;
+    background-color: white;
 }
 
 /*.grid-item:nth-child(3n+1) {
-    margin-left: 4%;
+margin-left: 4%;
 }*/
 
 /*.recipe:last-child {
-    margin-right: 8%;
+margin-right: 8%;
 }*/
 
 h2, .credit, ul, ol, .tags {
@@ -115,7 +116,7 @@ label {
 }
 
 footer {
-    
+
 }
 
 /* ----- FORM STYLES ----- */
@@ -172,7 +173,7 @@ form input[type="submit"], form button {
 }
 
 form input[type="submit"]:hover, form button:hover {
-    
+
 }
 
 form .success, form .error_message {
@@ -212,9 +213,47 @@ form .error_text {
     padding: 3px;
 }
 
+@media only screen and (max-width: 1300px){
+    /* styles for browsers smaller than 1300px; */
+    .grid-item, .grid-sizer {
+        width: 49%;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    /* styles for browsers smaller than 1200px; */
+    html {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    /* styles for browsers smaller than 1000px; */
+    .grid-item {
+        padding: 1% 3%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    /* styles for browsers smaller than 800px; */
+    .grid {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    /* styles for browsers smaller than 700px; */
+    .grid-item, .grid-sizer {
+        width: 100%;
+    }
+    .grid-item {
+        padding: 3% 5%;
+    }
+}
+
 
 .group:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
