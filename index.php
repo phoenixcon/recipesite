@@ -20,7 +20,7 @@
             <?php
 
             //CONNECTION TO DATABASE
-            include 'scripts/connection-local.php';
+            include '../connection/recipe-connection.php';
 
             //SELECT RECIPE NAMES
             $recipe_name_select = "SELECT * FROM recipe_name"; 
