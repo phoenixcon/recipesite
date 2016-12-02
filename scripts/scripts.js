@@ -149,7 +149,6 @@ $(document).ready(function() {
         columnWidth: '.grid-sizer',
         percentPosition: true,
         gutter: '.gutter-sizer',
-        stagger: 30
     })
 
     /*===== END GRID LAYOUT JS - MASONRY PLUGIN =====*/
