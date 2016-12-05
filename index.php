@@ -4,6 +4,7 @@
         <title>Legg Family Recipes</title>
         <meta charset="utf-8"  />
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta NAME="robots" CONTENT="noindex,nofollow">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="scripts/masonry.pkgd.min.js"></script>
@@ -13,7 +14,7 @@
     </head>
     <body>
         <header>
-            <h1>Legg Family Recipe Site</h1>
+            <h1>Family Recipes</h1>
         </header>
         <div class="group grid">
             <div class="grid-sizer"></div>
@@ -22,7 +23,7 @@
 
             //CONNECTION TO DATABASE
             include '../../connection/recipe-connection.php';
-            //include '/scripts/connection-local.php';
+            //include 'scripts/connection-local.php';
 
             //SELECT RECIPE NAMES
             $recipe_name_select = "SELECT * FROM recipe_name"; 
