@@ -142,15 +142,37 @@ $(document).ready(function() {
 
     /*===== GRID LAYOUT JS - MASONRY PLUGIN =====*/
 
+    var masonryOptions = {
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        percentPosition: true,
+        gutter: '.gutter-sizer'
+    }
+
+    var $grid = $('.grid').masonry( masonryOptions );
+
     if ($(window).width()>800) {
-        $('.grid').masonry({
-            // set itemSelector so .grid-sizer is not used in layout
-            itemSelector: '.grid-item',
-            // use element for option
-            columnWidth: '.grid-sizer',
-            percentPosition: true,
-            gutter: '.gutter-sizer'
-        })
+        $grid;
     }
     /*===== END GRID LAYOUT JS - MASONRY PLUGIN =====*/
+
+    var masonryOptions = {
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        percentPosition: true,
+        gutter: '.gutter-sizer'
+    }
+
+    var $grid = $('.grid').masonry( masonryOptions );
+
+    $('#search').hideseek({
+        ignore: '.ignore',
+        highlight: true,
+        nodata: 'No recipes found'
+    });
+    $('#search').on("_after", function() {
+        $grid.masonry( masonryOptions )
+    });
+
 });
+

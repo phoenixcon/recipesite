@@ -49,6 +49,10 @@ header, footer {
     width: 100%;
 }
 
+header {
+    text-align: center;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
@@ -69,6 +73,22 @@ h2 {
     margin: auto;
 }
 
+#search {
+    width: 88%;
+    height: 2em;
+    margin-bottom: 1%;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    text-align: center;
+    background-color: rgba(255,255,255,0.3);
+    border: none;
+    border-radius: 5px;
+}
+
+mark.highlight {
+    background-color: #ffff7f;
+}
+
 .grid-item, .grid-sizer {
     width: 32%;
 }
@@ -86,14 +106,6 @@ h2 {
     border-radius: 4px;
     background-color: rgba(0,0,0, 0.4);
 }
-
-/*.grid-item:nth-child(3n+1) {
-margin-left: 4%;
-}*/
-
-/*.recipe:last-child {
-margin-right: 8%;
-}*/
 
 h2, .credit, ul, ol, .tags {
     margin-bottom: 0.75em;

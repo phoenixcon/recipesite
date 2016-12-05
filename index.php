@@ -11,10 +11,11 @@
     <body>
         <header>
             <h1>Family Recipes</h1>
+            <input id="search" name="search" placeholder="Search" type="text" data-list=".grid" class="ignore">
         </header>
         <div class="group grid">
-            <div class="grid-sizer"></div>
-            <div class="gutter-sizer"></div>
+            <div class="grid-sizer ignore"></div>
+            <div class="gutter-sizer ignore"></div>
             <?php
 
             //CONNECTION TO DATABASE
@@ -25,10 +26,10 @@
             $recipe_name_select = "SELECT * FROM recipe_name"; 
             $name_result = mysqli_query($db, $recipe_name_select);
             while ($row = mysqli_fetch_assoc($name_result)) {
-                echo '<section class="recipe grid-item"><h2 class="recipetitle">'.$row['recipename'].'</h2>';
+                echo '<div class="recipe grid-item"><h2 class="recipetitle">'.$row['recipename'].'</h2>';
                 $recipe_name=$row['recipename'];
 
-                echo '<section class="credit"><label>Recipe Credit:</label>';
+                echo '<div class="credit"><label>Recipe Credit:</label>';
                 //SELECT RECIPE-CREDIT KEYS
                 $recipe_credit_select = "SELECT creditkey FROM recipe_name WHERE recipename='".$recipe_name."'";
                 $credit_result = mysqli_query($db, $recipe_credit_select);
@@ -43,7 +44,7 @@
                         $recipes[$recipe_name] = $credit_text_row['credittext'];
                     }
                 }
-                echo '</section>';
+                echo '</div>';
 
                 //SELECT MAIN RECIPE-KEYS
                 $recipe_key_select = "SELECT recipekey FROM recipe_name WHERE recipename='".$recipe_name."'";
@@ -81,7 +82,7 @@
                             echo '<span class="tags">'.$tag_row['tagtext'].'</span>';
                         }
                     }
-                    echo '</section>';
+                    echo '</div>';
 
                 }
             }
@@ -92,6 +93,7 @@
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="scripts/masonry.pkgd.min.js"></script>
+        <script src="scripts/jquery.hideseek.min.js"></script>
         <script type="text/javascript" src="scripts/scripts.js"></script>
     </body>
 </html>
