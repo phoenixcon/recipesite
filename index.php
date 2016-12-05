@@ -5,10 +5,6 @@
         <meta charset="utf-8"  />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta NAME="robots" CONTENT="noindex,nofollow">
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="scripts/masonry.pkgd.min.js"></script>
-        <script type="text/javascript" src="scripts/scripts.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/index.css">
     </head>
@@ -93,5 +89,9 @@
             ?>
         </div>
         <footer><h6>&copy; Midnight Design Group, 2016</h6></footer>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="scripts/masonry.pkgd.min.js"></script>
+        <script type="text/javascript" src="scripts/scripts.js"></script>
     </body>
 </html>
