@@ -316,7 +316,7 @@ form .error_text {
     html {
         font-size: 14px;
     }
-    .grid {
+    .grid, #viewall {
         width: 95%;
     }
     .grid-item, .grid-sizer {
@@ -328,6 +328,11 @@ form .error_text {
     }
     .gutter-sizer {
         width: 0%;
+    }
+    
+    #viewall {
+        font-size: 1.5em;
+        line-height: 2.0em;
     }
 
 }

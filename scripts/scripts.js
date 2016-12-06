@@ -1,5 +1,46 @@
 $(document).ready(function() {
 
+    /*===== GRID LAYOUT JS - MASONRY PLUGIN =====*/
+    
+    var masonryOptions = {
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        percentPosition: true,
+        gutter: '.gutter-sizer'
+    }
+
+    var $grid = $('.grid').masonry( masonryOptions );
+    
+    var data = '';
+    $.ajax({
+        type     : 'POST',
+        url      : 'scripts/php/main-recipes.php',
+        data     : data,
+        dataType : 'html',
+        encode   : false
+    })
+
+        .done (function(data) {
+        $('.grid').html(data);
+        if ($(window).width()>800) {
+            $grid.masonry('destroy');
+            $grid.masonry( masonryOptions );
+        }
+    });
+
+    /*===== REFRESH MASONRY AFTER SEARCH =====*/
+
+    $('#search').hideseek({
+        ignore: '.ignore',
+        highlight: true,
+        nodata: 'No recipes found'
+    });
+    $('#search').on("_after", function() {
+        $grid.masonry( masonryOptions )
+    });
+
+    /*===== END GRID LAYOUT JS - MASONRY PLUGIN =====*/
+
     /*===== FORM SUBMISSION =====*/
 
     $('form').submit(function(event) {
@@ -139,34 +180,6 @@ $(document).ready(function() {
     });
 
     /*===== END ADD FIELDS TO FORM =====*/
-
-    /*===== GRID LAYOUT JS - MASONRY PLUGIN =====*/
-
-    var masonryOptions = {
-        itemSelector: '.grid-item',
-        columnWidth: '.grid-sizer',
-        percentPosition: true,
-        gutter: '.gutter-sizer'
-    }
-
-    var $grid = $('.grid').masonry( masonryOptions );
-
-    if ($(window).width()>800) {
-        $grid;
-    }
-
-    /*===== REFRESH MASONRY AFTER SEARCH =====*/
-
-    $('#search').hideseek({
-        ignore: '.ignore',
-        highlight: true,
-        nodata: 'No recipes found'
-    });
-    $('#search').on("_after", function() {
-        $grid.masonry( masonryOptions )
-    });
-
-    /*===== END GRID LAYOUT JS - MASONRY PLUGIN =====*/
 
     $(document).on('click', 'span.tags', function(event) {
         var buttonname = $(this).attr('value');
