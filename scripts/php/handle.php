@@ -6,9 +6,9 @@ $data           = array(); //array for data - JSON
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     //form values
-    $form_name      = $_POST['name'];
-    $form_credit      = $_POST['credit'];
-    $form_ingredient  = $_POST['ingredient'];
+    $form_name         = $_POST['name'];
+    $form_credit       = $_POST['credit'];
+    $form_ingredient   = $_POST['ingredient'];
     $form_instruction  = $_POST['instruction'];
     $form_tag  = $_POST['tag'];
 
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     //form submission - enter data into DB
-    include('../../../connection/recipe-connection.php'); //mySQL Connection
+    include('../../../../connection/recipe-connection.php'); //mySQL Connection
     //include ('connection-local.php');
 
     $recipe_key_query = "SELECT recipekey FROM recipe_name WHERE recipename ='".$form_name."'";

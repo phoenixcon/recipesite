@@ -11,18 +11,18 @@ $(document).ready(function() {
         event.preventDefault();
         var form = $('#recipe-submit');
         var formData = form.serialize().replace(/%5B%5D/g, '[]').replace(/%20/g, ' ').replace('°', '&deg;').replace('é', '&eacute;');
-        console.log(formData);
+        //console.log(formData);
 
         $.ajax({
             type     : 'POST',
-            url      : '../scripts/handle.php',
+            url      : '../scripts/php/handle.php',
             data     : formData,
             dataType : 'json',
             encode   : true
         })
 
             .done (function(data) {
-            console.log(data);
+            //console.log(data);
 
             if (! data.success) {
 
@@ -154,16 +154,8 @@ $(document).ready(function() {
     if ($(window).width()>800) {
         $grid;
     }
-    /*===== END GRID LAYOUT JS - MASONRY PLUGIN =====*/
 
-    var masonryOptions = {
-        itemSelector: '.grid-item',
-        columnWidth: '.grid-sizer',
-        percentPosition: true,
-        gutter: '.gutter-sizer'
-    }
-
-    var $grid = $('.grid').masonry( masonryOptions );
+    /*===== REFRESH MASONRY AFTER SEARCH =====*/
 
     $('#search').hideseek({
         ignore: '.ignore',
@@ -172,6 +164,46 @@ $(document).ready(function() {
     });
     $('#search').on("_after", function() {
         $grid.masonry( masonryOptions )
+    });
+
+    /*===== END GRID LAYOUT JS - MASONRY PLUGIN =====*/
+
+    $(document).on('click', 'span.tags', function(event) {
+        var buttonname = $(this).attr('value');
+        var data = 'buttonname=' + buttonname;
+        $.ajax({
+            type     : 'POST',
+            url      : 'scripts/php/tags.php',
+            data     : data,
+            dataType : 'html',
+            encode   : false
+        })
+
+            .done (function(data) {
+            $('.grid').html(data);
+            $grid.masonry('destroy');
+            $grid.masonry( masonryOptions );
+        });
+
+    });
+
+    $(document).on('click', '#viewall', function(event) {
+        var buttonname = $(this).attr('value');
+        var data = 'buttonname=' + buttonname;
+        $.ajax({
+            type     : 'POST',
+            url      : 'scripts/php/main-recipes.php',
+            data     : data,
+            dataType : 'html',
+            encode   : false
+        })
+
+            .done (function(data) {
+            $('.grid').html(data);
+            $grid.masonry('destroy');
+            $grid.masonry( masonryOptions );
+        });
+
     });
 
 });

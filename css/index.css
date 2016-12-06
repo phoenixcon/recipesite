@@ -70,6 +70,20 @@ h2 {
     text-align: center;
 }
 
+#viewall {
+    width: 28%;
+    font-size: 1.25em;
+    border-radius: 6px;
+    border: 1px solid black;
+    line-height: 1.75em;
+    background-color: rgba(232,232,232,0.7);
+    cursor: pointer;
+}
+
+#viewall:hover {
+    background-color: rgba(232,232,232,0.9);
+}
+
 .grid {
     width: 88%;
     margin: auto;
@@ -129,6 +143,11 @@ label {
     margin-right: 0.25em;
     font-weight: 300;
     text-decoration: underline;
+    cursor: pointer;
+}
+
+.tags:hover {
+    color: #C0C0C0;
 }
 
 .tags:last-child {
