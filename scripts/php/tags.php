@@ -3,10 +3,9 @@
 <?php
 
 $tag_name = $_POST['buttonname'];
-//$tag_name = 'Entree';
 
-//include('../../../../connection/recipe-connection.php'); //mySQL Connection
-include ('connection-local.php');
+include('../../../../connection/recipe-connection.php'); //mySQL Connection
+//include ('connection-local.php');
 
 $tag_key_query = "SELECT tagkey FROM recipe_tags WHERE tagtext='".$tag_name."'";
 
@@ -95,8 +94,4 @@ while ($row = mysqli_fetch_assoc($tag_check_result)) {
     }
 
 }
-
-//$data['searchtagname'] = $tag_name;
-//echo json_encode($data);
-
 ?>
