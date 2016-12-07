@@ -40,8 +40,10 @@ $(document).ready(function() {
     });
 
     /*===== END GRID LAYOUT JS - MASONRY PLUGIN =====*/
-
-
+    
+    
+    /*===== TAGS FILTERING =====*/
+    
     $(document).on('click', '.tags', function(event) {
         var buttonname = $(this).attr('value');
         var data = 'buttonname=' + buttonname;
@@ -80,8 +82,12 @@ $(document).ready(function() {
 
     });
     
-    $('#sidemenu').load('scripts/php/taglist.php');
+    /*===== END TAGS FILTERING =====*/
     
+    /*===== OPTIONS MENU =====*/
+
+    $('#sidemenu').load('scripts/php/taglist.php');
+
     function openNav() {
         $( '#sidemenu' ).css( 'width', '250px' );
         $( '.menu' ).css( 'opacity', '0' );
@@ -91,11 +97,30 @@ $(document).ready(function() {
         $( '#sidemenu' ).css( 'width', '0px' );
         $( '.menu' ).css( 'opacity', '1' );
     }
-    
+
     $(document).on('click', '.menu span', openNav )
     $(document).on('click', '.closebtn', closeNav )
+    
+    /*===== END OPTIONS MENU =====*/
+    
+    /*===== URL QUERY PARAMETERS =====*/
+
+    function getQueryVariable(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+    
+    console.log(getQueryVariable("recipe"));
+    
+    /*===== END URL QUERY PARAMETERS =====*/
 
 });
 
-    
+
 
