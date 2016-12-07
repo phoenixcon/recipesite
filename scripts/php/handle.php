@@ -31,23 +31,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     //form submission - enter data into DB
-    include '../../../../connection/recipe-connection.php'; //mySQL Connection
-    //include ('connection-local.php');
+    $urlhost = $_SERVER['SERVER_NAME'];
+    $local = 'localhost';
+
+    if (substr($urlhost, 0, strlen($urlhost)) === $local) {
+        include 'connection-local.php';
+    } else {
+        include '../../../../connection/recipe-connection.php';
+    }
 
     $recipe_key_query = "SELECT recipekey FROM recipe_name WHERE recipename ='".$form_name."'";
     $recipe_check_result = mysqli_query($db, $recipe_key_query);
-    
+
     //Check if recipe already exists in table
     if (mysqli_num_rows ($recipe_check_result)>0) {
-        
+
         //If recipe exists, return error and stop
         $errors['recipeexists'] = $form_name.' already exists.';
         $data['message'] = 'Recipe: "'.$form_name.'" already exists.';
-        
+
     } else {
-        
+
         //If recipe doesn't exist, update the database
-        
+
         //Recipe Credit
         $credit_check_query = "SELECT creditkey FROM recipe_credit WHERE credittext = '".$form_credit."'";
         $update_credit_table = "INSERT INTO recipe_credit(creditkey, credittext) VALUES(null, '$form_credit')";

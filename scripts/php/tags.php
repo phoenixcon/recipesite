@@ -4,8 +4,14 @@
 
 $tag_name = $_POST['buttonname'];
 
-include '../../../../connection/recipe-connection.php'; //mySQL Connection
-//include ('connection-local.php');
+$urlhost = $_SERVER['SERVER_NAME'];
+$local = 'localhost';
+
+if (substr($urlhost, 0, strlen($urlhost)) === $local) {
+    include 'connection-local.php';
+} else {
+    include '../../../../connection/recipe-connection.php';
+}
 
 $tag_key_query = "SELECT tagkey FROM recipe_tags WHERE tagtext='".$tag_name."'";
 

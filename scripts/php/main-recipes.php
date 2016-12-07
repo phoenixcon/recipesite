@@ -3,9 +3,14 @@
 
 <?php
 
-//CONNECTION TO DATABASE
-include '../../../../connection/recipe-connection.php';
-//include 'connection-local.php';
+$urlhost = $_SERVER['SERVER_NAME'];
+$local = 'localhost';
+
+if (substr($urlhost, 0, strlen($urlhost)) === $local) {
+    include 'connection-local.php';
+} else {
+    include '../../../../connection/recipe-connection.php';
+}
 
 //SELECT RECIPE NAMES
 $recipe_name_select = "SELECT * FROM recipe_name"; 
