@@ -34,7 +34,7 @@ $(document).ready(function() {
         })
 
             .done (function(data) {
-            $('.recipe').html(data);
+            $('.recipe-contain').html(data);
         });
         
     } else {

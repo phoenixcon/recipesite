@@ -52,7 +52,7 @@ while ($row = mysqli_fetch_assoc($name_result)) {
             echo '<li>'.$instruction_row['textdescription'].'</li>';
         }
         echo '</ol>';
-        echo '<label>Tags:</label>';
+        echo '<div class="tags"><label>Tags:</label>';
         //SELECT RECIPE-TAG KEYS
         $recipe_tagkey_select = "SELECT tagkey FROM recipe_name_tag WHERE recipekey='".$recipekey."'";
         $tagkey_result = mysqli_query($db, $recipe_tagkey_select);
@@ -63,10 +63,10 @@ while ($row = mysqli_fetch_assoc($name_result)) {
             $recipe_tag_select = "SELECT tagtext FROM recipe_tags WHERE tagkey='".$tagkey."'";
             $tag_result = mysqli_query($db, $recipe_tag_select);
             while ($tag_row = mysqli_fetch_assoc($tag_result)) {
-                echo '<span class="tags" value="'.$tag_row['tagtext'].'">'.$tag_row['tagtext'].'</span>';
+                echo '<span value="'.$tag_row['tagtext'].'">'.$tag_row['tagtext'].'</span>';
             }
         }
-        echo '</div>';
+        echo '</div></div>';
 
     }
 }
