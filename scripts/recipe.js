@@ -20,7 +20,7 @@ $(document).ready(function() {
     /*===== GENERATE CONTENT FROM QUERY PARAMETERS =====*/
     
     if (getQueryVariable('name')) {
-        var recipename = getQueryVariable('recipe').replace(/%20/g, ' ');
+        var recipename = getQueryVariable('name').replace(/%20/g, ' ');
         var data = 'recipename=' + recipename;
         console.log(recipename);
         console.log(data);
