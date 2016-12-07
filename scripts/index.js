@@ -82,16 +82,12 @@ $(document).ready(function() {
 
 });
 
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
     function openNav() {
-        //document.getElementById("sidemenu").style.width = "250px";
         $( '#sidemenu' ).css( 'width', '250px' );
         $( '.menu' ).css( 'opacity', '0' );
     }
 
-    /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
     function closeNav() {
-        //document.getElementById("sidemenu").style.width = "0";
         $( '#sidemenu' ).css( 'width', '0px' );
         $( '.menu' ).css( 'opacity', '1' );
     }
