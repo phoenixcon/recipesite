@@ -19,7 +19,7 @@ $(document).ready(function() {
     
     /*===== GENERATE CONTENT FROM QUERY PARAMETERS =====*/
     
-    if (getQueryVariable('recipe')) {
+    if (getQueryVariable('name')) {
         var recipename = getQueryVariable('recipe').replace(/%20/g, ' ');
         var data = 'recipename=' + recipename;
         console.log(recipename);
@@ -37,6 +37,8 @@ $(document).ready(function() {
             $('.recipe').html(data);
         });
         
+    } else {
+        $('.recipe').html("<h1>There's nothing here. Try again.</h1>");
     }
     
     /*===== END GENERATE CONTENT FROM QUERY PARAMETERS =====*/
