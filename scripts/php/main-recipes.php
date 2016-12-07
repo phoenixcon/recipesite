@@ -11,7 +11,7 @@ include '../../../../connection/recipe-connection.php';
 $recipe_name_select = "SELECT * FROM recipe_name"; 
 $name_result = mysqli_query($db, $recipe_name_select);
 while ($row = mysqli_fetch_assoc($name_result)) {
-    echo '<div class="recipe grid-item"><h2 class="recipetitle">'.$row['recipename'].'</h2>';
+    echo '<div class="recipe grid-item"><a href="recipe?name='.$row['recipename'].'" target="_blank" title="Open '.$row['recipename'].' in new tab"><i class="material-icons">open_in_new</i></a><h2 class="recipetitle">'.$row['recipename'].'</h2>';
     $recipe_name=$row['recipename'];
 
     echo '<div class="credit"><label>Recipe Credit:</label>';

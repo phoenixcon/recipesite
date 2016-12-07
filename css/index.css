@@ -214,6 +214,22 @@ h2, .credit, ul, ol, .tags {
     margin-bottom: 0.75em;
 }
 
+.recipe h2 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.recipe a {
+    color: #e8e8e8;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.recipe a:hover {
+    color: white;
+}
+
 li {
     margin-bottom: 0.25em;
 }

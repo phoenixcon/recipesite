@@ -29,7 +29,7 @@ while ($row = mysqli_fetch_assoc($tag_check_result)) {
 
         while ($row = mysqli_fetch_assoc($recipe_name_result)) {
 
-            echo '<div class="recipe grid-item"><h2 class="recipetitle">'.$row['recipename'].'</h2>';
+            echo '<div class="recipe grid-item"><a href="recipe?name='.$row['recipename'].'" target="_blank" title="Open '.$row['recipename'].' in new tab"><i class="material-icons">open_in_new</i></a><h2 class="recipetitle">'.$row['recipename'].'</h2>';
             $recipe_name=$row['recipename'];
 
             echo '<div class="credit"><label>Recipe Credit:</label>';
