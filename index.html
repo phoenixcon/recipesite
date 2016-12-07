@@ -12,24 +12,14 @@
     </head>
     <body>
         <div class="menu">
-            <span onclick="openNav()">Options<i class="material-icons">chevron_right</i></span>
+            <span>Options<i class="material-icons">chevron_right</i></span>
         </div>
-        <div id="sidemenu">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <h3>Tags:</h3>
-            <ul>
-                <li class="tags" value="Entree">Entree</li>
-                <li class="tags" value="Side Dish">Side Dish</li>
-                <li class="tags" value="Chicken">Chicken</li>
-                <li class="tags" value="Vegetable">Vegetable</li>
-            </ul>
-        </div>
+        <div id="sidemenu"></div>
         <div id="container">
             <header>
                 <h1>Family Recipes</h1>
                 <input id="search" name="search" placeholder="Search" type="text" data-list=".grid" class="ignore">
                 <br>
-                <button id="viewall" value="ViewAll">View All Recipes</button>
             </header>
             <div class="group grid"></div>
             <footer><h6>&copy; Midnight Design Group, 2016</h6></footer>

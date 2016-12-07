@@ -79,9 +79,9 @@ $(document).ready(function() {
         });
 
     });
-
-});
-
+    
+    $('#sidemenu').load('scripts/php/taglist.php');
+    
     function openNav() {
         $( '#sidemenu' ).css( 'width', '250px' );
         $( '.menu' ).css( 'opacity', '0' );
@@ -91,4 +91,11 @@ $(document).ready(function() {
         $( '#sidemenu' ).css( 'width', '0px' );
         $( '.menu' ).css( 'opacity', '1' );
     }
+    
+    $(document).on('click', '.menu span', openNav )
+    $(document).on('click', '.closebtn', closeNav )
+
+});
+
+    
 

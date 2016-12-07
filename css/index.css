@@ -70,7 +70,7 @@ h2 {
     text-align: center;
 }
 
-#viewall {
+/*#viewall {
     width: 28%;
     font-size: 1.25em;
     border-radius: 6px;
@@ -82,7 +82,7 @@ h2 {
 
 #viewall:hover {
     background-color: rgba(232,232,232,0.9);
-}
+}*/
 
 /* ----- Search Styles ----- */
 
@@ -226,14 +226,14 @@ label {
     margin-right: 0.4em;
 }
 
-.tags {
+.tags, #viewall {
     margin-right: 0.25em;
     font-weight: 300;
     text-decoration: underline;
     cursor: pointer;
 }
 
-.tags:hover {
+.tags:hover, #viewall:hover {
     color: #C0C0C0;
 }
 
