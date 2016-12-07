@@ -35,6 +35,7 @@ $(document).ready(function() {
 
             .done (function(data) {
             $('.recipe-contain').html(data);
+            $('head title').html(recipename)
         });
         
     } else {
