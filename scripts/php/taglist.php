@@ -16,6 +16,8 @@
     }
     
     echo '<li id="viewall" value="ViewAll">View All Recipes</li>';
+    
+    mysqli_close($db);
 
     ?>
 </ul>
