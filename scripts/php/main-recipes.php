@@ -4,7 +4,6 @@
 <?php
 
 //CONNECTION TO DATABASE
-//include '../../connection/recipe-connection.php';
 include '../../../../connection/recipe-connection.php';
 //include 'connection-local.php';
 

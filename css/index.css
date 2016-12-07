@@ -84,10 +84,7 @@ h2 {
     background-color: rgba(232,232,232,0.9);
 }
 
-.grid {
-    width: 88%;
-    margin: auto;
-}
+/* ----- Search Styles ----- */
 
 #search {
     width: 88%;
@@ -96,13 +93,102 @@ h2 {
     font-size: 1.5em;
     line-height: 1.5em;
     text-align: center;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(232,232,232,0.3);
     border: 1px solid black;
     border-radius: 5px;
 }
 
+#search:hover {
+    background-color: rgba(232,232,232,0.4);
+}
+
+#search:active, #search:focus {
+    background-color: rgba(232,232,232,0.6);
+}
+
 mark.highlight {
     background-color: #ffff7f;
+}
+
+/* ----- End Search Styles ----- */
+
+/* ----- Menu Styles ----- */
+
+.menu {
+    position: fixed;
+    left: 0%;
+    top: 25%;
+    font-size: 1em;
+    line-height: 1.5em;
+    padding: 1px;
+    background-color: rgba(232,232,232,0.7);
+    border: 1 px solid black;
+    border-radius: 0 5px 5px 0;
+    color: black;
+    cursor: pointer;
+    transition: opacity .5s;
+}
+
+.menu:hover {
+    background-color: rgba(232,232,232,0.9);
+}
+
+.menu i, .menu span {
+    vertical-align: middle;
+}
+
+#sidemenu {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+#sidemenu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #e8e8e8;
+    text-decoration: none;
+}
+
+#sidemenu .closebtn:hover {
+    color: #e8e8e8;
+    text-decoration: none;
+}
+
+#sidemenu h3 {
+    margin: 0 0 1em 1em;
+}
+
+#sidemenu ul {
+    margin-left: 1em;
+}
+
+#sidemenu ul li {
+    list-style: none;
+}
+
+#container {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* ----- End Menu Styles ----- */
+
+/* ----- Grid and Recipe Card Styles ----- */
+
+.grid {
+    width: 88%;
+    margin: auto;
 }
 
 .grid-item, .grid-sizer {
@@ -154,11 +240,17 @@ label {
     margin-right: 0;
 }
 
+/* ----- End Grid and Recipe Card Styles ----- */
+
+/* ----- Footer Styles ----- */
+
 footer {
 
 }
 
-/* ----- FORM STYLES ----- */
+/* ----- End Footer Styles ----- */
+
+/* ----- Submit Form Styles ----- */
 
 form {
     width: 30%;
@@ -257,6 +349,10 @@ form .error_text {
     padding: 3px;
 }
 
+/* ----- End Submit Form Styles ----- */
+
+/* ----- Media Queries ----- */
+
 @media only screen and (max-device-width: 1310px){
     /* styles for browsers smaller than 1300px; */
     .grid-item, .grid-sizer {
@@ -343,9 +439,14 @@ form .error_text {
     }
 }
 
+/* ----- End Media Queries ----- */
+
+/* ----- Clearfix ----- */
 
 .group:after {
     content: "";
     display: table;
     clear: both;
 }
+
+/* ----- End Clearfix ----- */
