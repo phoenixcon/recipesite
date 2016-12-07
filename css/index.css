@@ -146,9 +146,10 @@ mark.highlight {
     left: 0;
     background-color: rgba(0, 0, 0, 0.7); 
     overflow-x: hidden; 
-    padding-top: 60px; 
+    padding: 60px 0 0; 
     transition: 0.5s; 
     white-space: nowrap;
+    box-sizing: border-box;
 }
 
 #sidemenu .closebtn {
@@ -167,11 +168,24 @@ mark.highlight {
 }
 
 #sidemenu h3 {
-    margin: 0 0 1em 1em;
+    margin-bottom: 1em;
 }
 
-#sidemenu ul {
-    margin-left: 1em;
+#viewall {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 3px;
+    box-sizing: border-box;
+    font-size: 1.25em;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: rgba(232,232,232,1);
+    cursor: pointer;
+}
+
+#viewall:hover {
+    background-color: rgba(232,232,232,0.8);
 }
 
 #sidemenu ul li {
@@ -242,14 +256,14 @@ label {
     margin-right: 0.4em;
 }
 
-.tags, #viewall {
+.tags {
     margin-right: 0.25em;
     font-weight: 300;
     text-decoration: underline;
     cursor: pointer;
 }
 
-.tags:hover, #viewall:hover {
+.tags:hover {
     color: #C0C0C0;
 }
 

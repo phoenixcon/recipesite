@@ -1,6 +1,3 @@
-<a href="javascript:void(0)" class="closebtn">&times;</a>
-<h3>Tags:</h3>
-
 <ul>
 
     <?php
@@ -20,8 +17,6 @@
     while ($row = mysqli_fetch_assoc($taglist_result)) {
         echo '<li class="tags" value="'.$row['tagtext'].'">'.$row['tagtext'].'</li>';
     }
-
-    echo '<li id="viewall" value="ViewAll">View All Recipes</li>';
 
     mysqli_close($db);
 

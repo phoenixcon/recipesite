@@ -86,15 +86,17 @@ $(document).ready(function() {
     
     /*===== OPTIONS MENU =====*/
 
-    $('#sidemenu').load('scripts/php/taglist.php');
+    $('#sidemenu div').load('scripts/php/taglist.php');
 
     function openNav() {
         $( '#sidemenu' ).css( 'width', '250px' );
+        $( '#sidemenu' ).css( 'padding', '60px 20px 0' );
         $( '.menu' ).css( 'opacity', '0' );
     }
 
     function closeNav() {
         $( '#sidemenu' ).css( 'width', '0px' );
+        $( '#sidemenu' ).css( 'padding', '60px 0 0' );
         $( '.menu' ).css( 'opacity', '1' );
     }
 
