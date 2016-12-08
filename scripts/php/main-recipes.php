@@ -13,7 +13,7 @@ if (substr($urlhost, 0, strlen($urlhost)) === $local) {
 }
 
 //SELECT RECIPE NAMES
-$recipe_name_select = "SELECT * FROM recipe_name"; 
+$recipe_name_select = "SELECT * FROM recipe_name ORDER BY recipename"; 
 $name_result = mysqli_query($db, $recipe_name_select);
 while ($row = mysqli_fetch_assoc($name_result)) {
     echo '<div class="recipe grid-item"><a href="recipe?name='.$row['recipename'].'" target="_blank" title="Open '.$row['recipename'].' in new tab"><i class="material-icons">open_in_new</i></a><h2 class="recipetitle">'.$row['recipename'].'</h2>';

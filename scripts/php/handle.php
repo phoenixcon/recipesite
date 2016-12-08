@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         //Recipe Credit
         $credit_check_query = "SELECT creditkey FROM recipe_credit WHERE credittext = '".$form_credit."'";
-        $update_credit_table = "INSERT INTO recipe_credit(creditkey, credittext) VALUES(null, '$form_credit')";
+        $update_credit_table = "INSERT INTO recipe_credit(creditkey, credittext) VALUES(null, '".$form_credit."')";
 
         $credit_check_result = mysqli_query($db, $credit_check_query);
 
