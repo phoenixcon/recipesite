@@ -47,6 +47,11 @@ html {
     min-height: 100%;
 }
 
+body {
+    height: 100%;
+    min-height: 100%;
+}
+
 header, footer {
     width: 100%;
 }
@@ -145,7 +150,7 @@ mark.highlight {
     height: 100%;
     width: 0; 
     position: fixed; 
-    z-index: 1; 
+    z-index: 2; 
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.7); 
@@ -199,6 +204,18 @@ mark.highlight {
 #container {
     transition: margin-left .5s;
     padding: 20px;
+}
+
+#openmenu {
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity .5s;
 }
 
 /* ----- End Menu Styles ----- */
