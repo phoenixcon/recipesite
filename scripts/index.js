@@ -13,10 +13,12 @@ $(document).ready(function() {
 
         .done (function(data) {
         $('.grid').html(data);
-        if ($(window).width()>800) {
+        /*if ($(window).width()>800) {
             $grid.masonry('destroy');
             $grid.masonry( masonryOptions );
-        }
+        }*/
+        $grid.masonry('destroy');
+        $grid.masonry( masonryOptions );
     });
 
     var masonryOptions = {
