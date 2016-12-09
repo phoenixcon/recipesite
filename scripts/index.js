@@ -108,7 +108,7 @@ $(document).ready(function() {
 
     $(document).on('click', '.menu span', openNav )
     $(document).on('click', '.closebtn', closeNav )
-    $(document).on('click', '#openmenu', closeNav )
+    $(document).on('click touchstart', '#openmenu', closeNav )
     
     /*===== END OPTIONS MENU =====*/
     
