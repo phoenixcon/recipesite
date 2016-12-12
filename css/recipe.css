@@ -105,7 +105,7 @@ label {
 }
 
 footer {
-    position: fixed;
+    position: absolute;
     bottom: 0px;
     padding: 0 10px 10px;
 }
@@ -160,6 +160,15 @@ footer {
     
     .recipe-contain {
         width: 90%;
+    }
+}
+
+@media only screen and (max-device-height : 775px) {
+    footer {
+        position: relative;
+        text-align: center;
+        margin-top: 3%;
+        font-weight: 300;
     }
 }
 
