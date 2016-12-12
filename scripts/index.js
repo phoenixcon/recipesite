@@ -93,20 +93,20 @@ $(document).ready(function() {
     function openNav() {
         $( '#sidemenu' ).css( 'width', '250px' );
         $( '#sidemenu' ).css( 'padding', '60px 20px 0' );
-        $( '.menu' ).css( 'opacity', '0' );
         $( 'body' ).css( 'overflow-y', 'hidden' );
+        $( '#container' ).css( 'overflow-y', 'hidden' );
         $( '#openmenu' ).css( 'opacity', '0.75' ).css('width', '100%').css('height', '100%').css('z-index', '2');
     }
 
     function closeNav() {
         $( '#sidemenu' ).css( 'width', '0px' );
         $( '#sidemenu' ).css( 'padding', '60px 0 0' );
-        $( '.menu' ).css( 'opacity', '1' );
         $( 'body' ).css( 'overflow-y', 'scroll' );
+        $( '#container' ).css( 'overflow-y', 'scroll' );
         $( '#openmenu' ).css('opacity', '0').css('width', '0').css('height', '0').css('z-index', '0');
     }
 
-    $(document).on('click', '.menu span', openNav )
+    $(document).on('click', '#optionsicon', openNav )
     $(document).on('click', '.closebtn', closeNav )
     $(document).on('click touchstart', '#openmenu', closeNav )
     
