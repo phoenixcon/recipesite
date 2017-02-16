@@ -125,7 +125,7 @@ $(document).ready(function() {
         return(false);
     }
     
-    console.log(getQueryVariable("recipe"));
+    //console.log(getQueryVariable("recipe"));
     
     /*===== END URL QUERY PARAMETERS =====*/
 
