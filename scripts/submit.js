@@ -110,7 +110,7 @@
         e.preventDefault();
         if(instruction < max_fields){ //max input box allowed
             instruction++; //text box increment
-            $(instructionwrapper).append('<div><input type="text" name="instruction[]" class="extra" required/><a href="#" class="extra remove_field">Remove</a></div>'); //add input box
+            $(instructionwrapper).append('<div><textarea name="instruction[]" class="extra" required/></textarea><a href="#" class="extra remove_field">Remove</a></div>'); //add input box
             $('#instruction_field input.extra:last').focus();
         }
     });

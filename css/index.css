@@ -311,8 +311,9 @@ form {
     text-align: center;
 }
 
-form label, form input {
+form label, form input, form textarea {
     margin-bottom: 15px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 form label {
@@ -339,14 +340,17 @@ form div a, form div a:hover, form div a:active, form div a:focus {
     font-size: 0.75em;
 }
 
-form .success, form .error, form .error_text, form input, form button {
+form .success, form .error, form .error_text, form input, form button, form textarea {
     width: 80%;
 }
 
-form input, form button {
+form input, form button, form textarea {
     text-align: center;
-    font-size: 1.25em;
     box-sizing: border-box;
+}
+
+form input, form button {
+    font-size: 1.25em;
 }
 
 form input[type="submit"], form button {
